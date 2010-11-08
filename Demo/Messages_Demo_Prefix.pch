@@ -1,0 +1,14 @@
+//
+//  Messages_Demo_Prefix.pch
+//  Messages Demo
+//
+//  Created by Sam Soffes on 11/7/10.
+//  Copyright 2010 Sam Soffes. All rights reserved.
+//
+//  Prefix header for all source files of the 'Messages Demo' target in the 'Messages Demo' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif

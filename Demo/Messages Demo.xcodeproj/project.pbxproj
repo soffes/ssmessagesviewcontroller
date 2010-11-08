@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* MDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* MDAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		B27D0FC912878A3300B58D1D /* MDDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27D0FC812878A3300B58D1D /* MDDemoViewController.m */; };
+		B27D0FD412878AA300B58D1D /* SSMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27D0FCF12878AA300B58D1D /* SSMessagesViewController.m */; };
+		B27D0FD512878AA300B58D1D /* SSMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B27D0FD112878AA300B58D1D /* SSMessageTableViewCell.m */; };
+		B27D0FD612878AA300B58D1D /* SSMessageTableViewCellBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B27D0FD312878AA300B58D1D /* SSMessageTableViewCellBubbleView.m */; };
+		B27D0FDC12878AAB00B58D1D /* SSMessagesViewControllerSendButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D0FD812878AAB00B58D1D /* SSMessagesViewControllerSendButtonBackground.png */; };
+		B27D0FDD12878AAB00B58D1D /* SSMessagesViewControllerTextFieldBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D0FD912878AAB00B58D1D /* SSMessagesViewControllerTextFieldBackground.png */; };
+		B27D0FDE12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGray.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D0FDA12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGray.png */; };
+		B27D0FDF12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D0FDB12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGreen.png */; };
+		B27D0FF012878B2200B58D1D /* SSToolkit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B27D0FEF12878B2200B58D1D /* SSToolkit.bundle */; };
+		B27D0FFA12878B2700B58D1D /* libTWToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B27D0FEE12878B1900B58D1D /* libTWToolkit.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B27D0FED12878B1900B58D1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libTWToolkit.a */;
+			remoteInfo = SSToolkit;
+		};
+		B27D0FFB12878B2D00B58D1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* SSToolkit */;
+			remoteInfo = SSToolkit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* MDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* MDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Messages Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Messages Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Messages_Demo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messages_Demo_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Messages_Demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Messages_Demo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		B27D0FC712878A3300B58D1D /* MDDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDemoViewController.h; sourceTree = "<group>"; };
+		B27D0FC812878A3300B58D1D /* MDDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDemoViewController.m; sourceTree = "<group>"; };
+		B27D0FCE12878AA300B58D1D /* SSMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSMessagesViewController.h; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessagesViewController.h; sourceTree = "<group>"; };
+		B27D0FCF12878AA300B58D1D /* SSMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessagesViewController.m; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessagesViewController.m; sourceTree = "<group>"; };
+		B27D0FD012878AA300B58D1D /* SSMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSMessageTableViewCell.h; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessageTableViewCell.h; sourceTree = "<group>"; };
+		B27D0FD112878AA300B58D1D /* SSMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessageTableViewCell.m; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessageTableViewCell.m; sourceTree = "<group>"; };
+		B27D0FD212878AA300B58D1D /* SSMessageTableViewCellBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSMessageTableViewCellBubbleView.h; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessageTableViewCellBubbleView.h; sourceTree = "<group>"; };
+		B27D0FD312878AA300B58D1D /* SSMessageTableViewCellBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessageTableViewCellBubbleView.m; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessageTableViewCellBubbleView.m; sourceTree = "<group>"; };
+		B27D0FD812878AAB00B58D1D /* SSMessagesViewControllerSendButtonBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessagesViewControllerSendButtonBackground.png; sourceTree = "<group>"; };
+		B27D0FD912878AAB00B58D1D /* SSMessagesViewControllerTextFieldBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessagesViewControllerTextFieldBackground.png; sourceTree = "<group>"; };
+		B27D0FDA12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessageTableViewCellBackgroundGray.png; sourceTree = "<group>"; };
+		B27D0FDB12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessageTableViewCellBackgroundGreen.png; sourceTree = "<group>"; };
+		B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSToolkit.xcodeproj; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Demo/SSToolkit/SSToolkit.xcodeproj; sourceTree = "<group>"; };
+		B27D0FEF12878B2200B58D1D /* SSToolkit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SSToolkit.bundle; path = ../../../../Code/samsoffes/ssmessagesviewcontroller/Demo/SSToolkit/Resources/SSToolkit.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				B27D0FFA12878B2700B58D1D /* libTWToolkit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */,
+				1D3623240D0F684500981E51 /* MDAppDelegate.h */,
+				1D3623250D0F684500981E51 /* MDAppDelegate.m */,
+				B27D0FC712878A3300B58D1D /* MDDemoViewController.h */,
+				B27D0FC812878A3300B58D1D /* MDDemoViewController.m */,
+				B27D0FCE12878AA300B58D1D /* SSMessagesViewController.h */,
+				B27D0FCF12878AA300B58D1D /* SSMessagesViewController.m */,
+				B27D0FD012878AA300B58D1D /* SSMessageTableViewCell.h */,
+				B27D0FD112878AA300B58D1D /* SSMessageTableViewCell.m */,
+				B27D0FD212878AA300B58D1D /* SSMessageTableViewCellBubbleView.h */,
+				B27D0FD312878AA300B58D1D /* SSMessageTableViewCellBubbleView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Messages Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Messages_Demo_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B27D0FD712878AAB00B58D1D /* Images */,
+				B27D0FEF12878B2200B58D1D /* SSToolkit.bundle */,
+				8D1107310486CEB800E47090 /* Messages_Demo-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B27D0FD712878AAB00B58D1D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B27D0FD812878AAB00B58D1D /* SSMessagesViewControllerSendButtonBackground.png */,
+				B27D0FD912878AAB00B58D1D /* SSMessagesViewControllerTextFieldBackground.png */,
+				B27D0FDA12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGray.png */,
+				B27D0FDB12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGreen.png */,
+			);
+			name = Images;
+			path = ../../../../Code/samsoffes/ssmessagesviewcontroller/Images;
+			sourceTree = "<group>";
+		};
+		B27D0FEA12878B1900B58D1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B27D0FEE12878B1900B58D1D /* libTWToolkit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Messages Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Messages Demo" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B27D0FFC12878B2D00B58D1D /* PBXTargetDependency */,
+			);
+			name = "Messages Demo";
+			productName = "Messages Demo";
+			productReference = 1D6058910D05DD3D006BFB54 /* Messages Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Messages Demo" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B27D0FEA12878B1900B58D1D /* Products */;
+					ProjectRef = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Messages Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B27D0FEE12878B1900B58D1D /* libTWToolkit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTWToolkit.a;
+			remoteRef = B27D0FED12878B1900B58D1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27D0FDC12878AAB00B58D1D /* SSMessagesViewControllerSendButtonBackground.png in Resources */,
+				B27D0FDD12878AAB00B58D1D /* SSMessagesViewControllerTextFieldBackground.png in Resources */,
+				B27D0FDE12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGray.png in Resources */,
+				B27D0FDF12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGreen.png in Resources */,
+				B27D0FF012878B2200B58D1D /* SSToolkit.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* MDAppDelegate.m in Sources */,
+				B27D0FC912878A3300B58D1D /* MDDemoViewController.m in Sources */,
+				B27D0FD412878AA300B58D1D /* SSMessagesViewController.m in Sources */,
+				B27D0FD512878AA300B58D1D /* SSMessageTableViewCell.m in Sources */,
+				B27D0FD612878AA300B58D1D /* SSMessageTableViewCellBubbleView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B27D0FFC12878B2D00B58D1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSToolkit;
+			targetProxy = B27D0FFB12878B2D00B58D1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Messages_Demo_Prefix.pch;
+				HEADER_SEARCH_PATHS = SSToolkit;
+				INFOPLIST_FILE = "Messages_Demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				PRODUCT_NAME = "Messages Demo";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Messages_Demo_Prefix.pch;
+				HEADER_SEARCH_PATHS = SSToolkit;
+				INFOPLIST_FILE = "Messages_Demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				PRODUCT_NAME = "Messages Demo";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Messages Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Messages Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
