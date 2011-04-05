@@ -6,6 +6,6 @@ Simple message UI like Messages.app. I started writing this to create an in-app 
 
 You'll need to get SSToolkit first:
 
-    $ git submodule init --update
+    $ git submodule update --init
 
 Then you can just open Xcode and build away. Enjoy.
