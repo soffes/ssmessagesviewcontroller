@@ -64,7 +64,7 @@
 		B27D0FDA12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessageTableViewCellBackgroundGray.png; sourceTree = "<group>"; };
 		B27D0FDB12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessageTableViewCellBackgroundGreen.png; sourceTree = "<group>"; };
 		B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSToolkit.xcodeproj; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Demo/SSToolkit/SSToolkit.xcodeproj; sourceTree = "<group>"; };
-		B27D0FEF12878B2200B58D1D /* SSToolkit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SSToolkit.bundle; path = ../../../../Code/samsoffes/ssmessagesviewcontroller/Demo/SSToolkit/Resources/SSToolkit.bundle; sourceTree = "<group>"; };
+		B27D0FEF12878B2200B58D1D /* SSToolkit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SSToolkit.bundle; path = SSToolkit/Resources/SSToolkit.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
