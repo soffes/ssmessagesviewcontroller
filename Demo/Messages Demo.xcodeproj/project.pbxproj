@@ -21,18 +21,18 @@
 		B27D0FDE12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGray.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D0FDA12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGray.png */; };
 		B27D0FDF12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D0FDB12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGreen.png */; };
 		B27D0FF012878B2200B58D1D /* SSToolkit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B27D0FEF12878B2200B58D1D /* SSToolkit.bundle */; };
-		B27D0FFA12878B2700B58D1D /* libTWToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B27D0FEE12878B1900B58D1D /* libTWToolkit.a */; };
+		C94A5254134B0730004C7881 /* libTWToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C94A5238134B05DB004C7881 /* libTWToolkit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B27D0FED12878B1900B58D1D /* PBXContainerItemProxy */ = {
+		C94A5237134B05DB004C7881 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = SSToolkit;
 		};
-		B27D0FFB12878B2D00B58D1D /* PBXContainerItemProxy */ = {
+		C94A524F134B06D3004C7881 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
 			proxyType = 1;
@@ -63,7 +63,7 @@
 		B27D0FD912878AAB00B58D1D /* SSMessagesViewControllerTextFieldBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessagesViewControllerTextFieldBackground.png; sourceTree = "<group>"; };
 		B27D0FDA12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessageTableViewCellBackgroundGray.png; sourceTree = "<group>"; };
 		B27D0FDB12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessageTableViewCellBackgroundGreen.png; sourceTree = "<group>"; };
-		B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSToolkit.xcodeproj; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Demo/SSToolkit/SSToolkit.xcodeproj; sourceTree = "<group>"; };
+		B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSToolkit.xcodeproj; path = ../SSToolkit/SSToolkit.xcodeproj; sourceTree = "<group>"; };
 		B27D0FEF12878B2200B58D1D /* SSToolkit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SSToolkit.bundle; path = SSToolkit/Resources/SSToolkit.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
-				B27D0FFA12878B2700B58D1D /* libTWToolkit.a in Frameworks */,
+				C94A5254134B0730004C7881 /* libTWToolkit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,10 +161,10 @@
 			path = ../Images;
 			sourceTree = "<group>";
 		};
-		B27D0FEA12878B1900B58D1D /* Products */ = {
+		C94A5234134B05DB004C7881 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B27D0FEE12878B1900B58D1D /* libTWToolkit.a */,
+				C94A5238134B05DB004C7881 /* libTWToolkit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B27D0FFC12878B2D00B58D1D /* PBXTargetDependency */,
+				C94A5250134B06D3004C7881 /* PBXTargetDependency */,
 			);
 			name = "Messages Demo";
 			productName = "Messages Demo";
@@ -209,7 +209,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B27D0FEA12878B1900B58D1D /* Products */;
+					ProductGroup = C94A5234134B05DB004C7881 /* Products */;
 					ProjectRef = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
 				},
 			);
@@ -221,11 +221,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B27D0FEE12878B1900B58D1D /* libTWToolkit.a */ = {
+		C94A5238134B05DB004C7881 /* libTWToolkit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTWToolkit.a;
-			remoteRef = B27D0FED12878B1900B58D1D /* PBXContainerItemProxy */;
+			remoteRef = C94A5237134B05DB004C7881 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -262,10 +262,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B27D0FFC12878B2D00B58D1D /* PBXTargetDependency */ = {
+		C94A5250134B06D3004C7881 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SSToolkit;
-			targetProxy = B27D0FFB12878B2D00B58D1D /* PBXContainerItemProxy */;
+			targetProxy = C94A524F134B06D3004C7881 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
