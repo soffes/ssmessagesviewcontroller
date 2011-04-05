@@ -29,14 +29,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libTWToolkit.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = SSToolkit;
 		};
 		B27D0FFB12878B2D00B58D1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* SSToolkit */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = SSToolkit;
 		};
 /* End PBXContainerItemProxy section */
@@ -53,12 +53,12 @@
 		8D1107310486CEB800E47090 /* Messages_Demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Messages_Demo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		B27D0FC712878A3300B58D1D /* MDDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDemoViewController.h; sourceTree = "<group>"; };
 		B27D0FC812878A3300B58D1D /* MDDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDemoViewController.m; sourceTree = "<group>"; };
-		B27D0FCE12878AA300B58D1D /* SSMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSMessagesViewController.h; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessagesViewController.h; sourceTree = "<group>"; };
-		B27D0FCF12878AA300B58D1D /* SSMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessagesViewController.m; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessagesViewController.m; sourceTree = "<group>"; };
-		B27D0FD012878AA300B58D1D /* SSMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSMessageTableViewCell.h; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessageTableViewCell.h; sourceTree = "<group>"; };
-		B27D0FD112878AA300B58D1D /* SSMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessageTableViewCell.m; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessageTableViewCell.m; sourceTree = "<group>"; };
-		B27D0FD212878AA300B58D1D /* SSMessageTableViewCellBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSMessageTableViewCellBubbleView.h; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessageTableViewCellBubbleView.h; sourceTree = "<group>"; };
-		B27D0FD312878AA300B58D1D /* SSMessageTableViewCellBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessageTableViewCellBubbleView.m; path = ../../../../../Code/samsoffes/ssmessagesviewcontroller/Classes/SSMessageTableViewCellBubbleView.m; sourceTree = "<group>"; };
+		B27D0FCE12878AA300B58D1D /* SSMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSMessagesViewController.h; path = ../../Classes/SSMessagesViewController.h; sourceTree = "<group>"; };
+		B27D0FCF12878AA300B58D1D /* SSMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessagesViewController.m; path = ../../Classes/SSMessagesViewController.m; sourceTree = "<group>"; };
+		B27D0FD012878AA300B58D1D /* SSMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSMessageTableViewCell.h; path = ../../Classes/SSMessageTableViewCell.h; sourceTree = "<group>"; };
+		B27D0FD112878AA300B58D1D /* SSMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessageTableViewCell.m; path = ../../Classes/SSMessageTableViewCell.m; sourceTree = "<group>"; };
+		B27D0FD212878AA300B58D1D /* SSMessageTableViewCellBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSMessageTableViewCellBubbleView.h; path = ../../Classes/SSMessageTableViewCellBubbleView.h; sourceTree = "<group>"; };
+		B27D0FD312878AA300B58D1D /* SSMessageTableViewCellBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessageTableViewCellBubbleView.m; path = ../../Classes/SSMessageTableViewCellBubbleView.m; sourceTree = "<group>"; };
 		B27D0FD812878AAB00B58D1D /* SSMessagesViewControllerSendButtonBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessagesViewControllerSendButtonBackground.png; sourceTree = "<group>"; };
 		B27D0FD912878AAB00B58D1D /* SSMessagesViewControllerTextFieldBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessagesViewControllerTextFieldBackground.png; sourceTree = "<group>"; };
 		B27D0FDA12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessageTableViewCellBackgroundGray.png; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				B27D0FDB12878AAB00B58D1D /* SSMessageTableViewCellBackgroundGreen.png */,
 			);
 			name = Images;
-			path = ../../../../Code/samsoffes/ssmessagesviewcontroller/Images;
+			path = ../Images;
 			sourceTree = "<group>";
 		};
 		B27D0FEA12878B1900B58D1D /* Products */ = {
