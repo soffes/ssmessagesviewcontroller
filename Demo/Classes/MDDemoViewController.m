@@ -38,11 +38,11 @@ NSString *lorem[] = {
 
 #pragma mark SSMessagesViewController
 
-- (SSMessageTableViewCellMessageStyle)messageStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (SSMessageStyle)messageStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (indexPath.row % 2) {
-		return SSMessageTableViewCellMessageStyleGreen;
+		return SSMessageStyleRight;
 	}
-	return SSMessageTableViewCellMessageStyleGray;
+	return SSMessageStyleLeft;
 }
 
 

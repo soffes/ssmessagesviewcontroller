@@ -3,22 +3,26 @@
 //  Messages
 //
 //  Created by Sam Soffes on 3/10/10.
-//  Copyright 2010 Sam Soffes. All rights reserved.
+//  Copyright 2010-2011 Sam Soffes. All rights reserved.
 //
 
 typedef enum {
-	SSMessageTableViewCellMessageStyleGray = 0,
-	SSMessageTableViewCellMessageStyleGreen = 1
-} SSMessageTableViewCellMessageStyle;
+	SSMessageStyleLeft = 0,
+	SSMessageStyleRight = 1
+} SSMessageStyle;
 
 @class SSMessageTableViewCellBubbleView;
 
 @interface SSMessageTableViewCell : UITableViewCell {
 
-	SSMessageTableViewCellBubbleView *bubbleView;
+@private
+	
+	SSMessageTableViewCellBubbleView *_bubbleView;
 }
 
 @property (nonatomic, copy) NSString *messageText;
-@property (nonatomic, assign) SSMessageTableViewCellMessageStyle messageStyle;
+@property (nonatomic, assign) SSMessageStyle messageStyle;
+
+- (void)setBackgroundImage:(UIImage *)backgroundImage forMessageStyle:(SSMessageStyle)messsageStyle;
 
 @end

@@ -3,46 +3,37 @@
 //  Messages
 //
 //  Created by Sam Soffes on 3/10/10.
-//  Copyright 2010 Sam Soffes. All rights reserved.
+//  Copyright 2010-2011 Sam Soffes. All rights reserved.
 //
 
 #import "SSMessageTableViewCellBubbleView.h"
 
 #define kFont [UIFont systemFontOfSize:15.0]
 static UILineBreakMode kLineBreakMode = UILineBreakModeWordWrap;
-static CGFloat kMaxWidth = 223.0; // TODO: Make dynamic
-static CGFloat kPaddingTop = 6.0;
-static CGFloat kPaddingBottom = 8.0;
-static CGFloat kMarginTop = 2.0;
-static CGFloat kMarginBottom = 2.0;
+static CGFloat kMaxWidth = 223.0f; // TODO: Make dynamic
+static CGFloat kPaddingTop = 4.0f;
+static CGFloat kPaddingBottom = 8.0f;
+static CGFloat kMarginTop = 2.0f;
+static CGFloat kMarginBottom = 2.0f;
 
 @implementation SSMessageTableViewCellBubbleView
 
-@synthesize messageText;
-@synthesize messageStyle;
+@synthesize messageText = _messageText;
+@synthesize leftBackgroundImage = _leftBackgroundImage;
+@synthesize rightBackgroundImage = _rightBackgroundImage;
+@synthesize messageStyle = _messageStyle;
 
 #pragma mark Class Methods
 
-+ (UIImage *)bubbleImageForMessageStyle:(SSMessageTableViewCellMessageStyle)aMessageStyle {
-	UIImage *image;
-	if (aMessageStyle == SSMessageTableViewCellMessageStyleGreen) {
-		image = [[UIImage imageNamed:@"SSMessageTableViewCellBackgroundGreen.png"] stretchableImageWithLeftCapWidth:17 topCapHeight:14];
-	} else {
-		image = [[UIImage imageNamed:@"SSMessageTableViewCellBackgroundGray.png"] stretchableImageWithLeftCapWidth:24 topCapHeight:14];
-	}
-	return image;
-}
-
-
 + (CGSize)textSizeForText:(NSString *)text {
-	CGSize maxSize = CGSizeMake(kMaxWidth - 38.0, 1000.0);
+	CGSize maxSize = CGSizeMake(kMaxWidth - 35.0f, 1000.0f);
 	return [text sizeWithFont:kFont constrainedToSize:maxSize lineBreakMode:kLineBreakMode];
 }
 
 
 + (CGSize)bubbleSizeForText:(NSString *)text {
 	CGSize textSize = [self textSizeForText:text];
-	return CGSizeMake(textSize.width + 38.0, textSize.height + kPaddingTop + kPaddingBottom);
+	return CGSizeMake(textSize.width + 35.0f, textSize.height + kPaddingTop + kPaddingBottom);
 }
 
 
@@ -50,25 +41,37 @@ static CGFloat kMarginBottom = 2.0;
 	return [self bubbleSizeForText:text].height + kMarginTop + kMarginBottom;
 }
 
+
+#pragma mark NSObject
+
+- (void)dealloc {
+	[_messageText release];
+	[_leftBackgroundImage release];
+	[_rightBackgroundImage release];
+	[super dealloc];
+}
+
+
 #pragma mark UIView
 
 - (id)initWithFrame:(CGRect)frame {
 	if (self = [super initWithFrame:frame]) {
-		self.backgroundColor = [UIColor colorWithRed:0.859 green:0.886 blue:0.929 alpha:1.0];
+		self.backgroundColor = [UIColor colorWithRed:0.859f green:0.886f blue:0.929f alpha:1.0f];
 	}
 	return self;
 }
 
 
 - (void)drawRect:(CGRect)frame {
-	UIImage *bubbleImage = [[self class] bubbleImageForMessageStyle:messageStyle];
-	CGSize bubbleSize = [[self class] bubbleSizeForText:messageText];
-	CGRect bubbleFrame = CGRectMake((messageStyle == SSMessageTableViewCellMessageStyleGreen ? self.frame.size.width - bubbleSize.width : 0.0), kMarginTop, bubbleSize.width, bubbleSize.height);
+	UIImage *bubbleImage = _messageStyle == SSMessageStyleLeft ? _leftBackgroundImage : _rightBackgroundImage;
+	CGSize bubbleSize = [[self class] bubbleSizeForText:_messageText];
+	CGRect bubbleFrame = CGRectMake((_messageStyle == SSMessageStyleRight ? self.frame.size.width - bubbleSize.width : 0.0f), kMarginTop, bubbleSize.width, bubbleSize.height);
 	[bubbleImage drawInRect:bubbleFrame];
 	
-	CGSize textSize = [[self class] textSizeForText:messageText];
-	CGRect textFrame = CGRectMake(((messageStyle == SSMessageTableViewCellMessageStyleGreen) ? (13.0 + bubbleFrame.origin.x) : 23.0), kPaddingTop + kMarginTop, textSize.width, textSize.height);
-	[messageText drawInRect:textFrame withFont:kFont lineBreakMode:kLineBreakMode alignment:(messageStyle == SSMessageTableViewCellMessageStyleGreen) ? UITextAlignmentRight : UITextAlignmentLeft];
+	CGSize textSize = [[self class] textSizeForText:_messageText];
+	CGFloat textX = (CGFloat)bubbleImage.leftCapWidth - 3.0f + ((_messageStyle == SSMessageStyleRight) ? bubbleFrame.origin.x : 0.0f);
+	CGRect textFrame = CGRectMake(textX, kPaddingTop + kMarginTop, textSize.width, textSize.height);
+	[_messageText drawInRect:textFrame withFont:kFont lineBreakMode:kLineBreakMode alignment:(_messageStyle == SSMessageStyleRight) ? UITextAlignmentRight : UITextAlignmentLeft];
 }
 
 @end

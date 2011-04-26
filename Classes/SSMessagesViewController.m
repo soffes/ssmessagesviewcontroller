@@ -3,92 +3,94 @@
 //  Messages
 //
 //  Created by Sam Soffes on 3/10/10.
-//  Copyright 2010 Sam Soffes. All rights reserved.
+//  Copyright 2010-2011 Sam Soffes. All rights reserved.
 //
 
 #import "SSMessagesViewController.h"
 #import "SSMessageTableViewCell.h"
 #import "SSMessageTableViewCellBubbleView.h"
-#import <SSToolkit/SSGradientView.h>
 #import <SSToolkit/SSTextField.h>
 
-CGFloat kInputHeight = 40.0;
+CGFloat kInputHeight = 40.0f;
 
 @implementation SSMessagesViewController
 
 @synthesize tableView = _tableView;
+@synthesize inputBackgroundView = _inputBackgroundView;
+@synthesize textField = _textField;
+@synthesize sendButton = _sendButton;
+@synthesize leftBackgroundImage = _leftBackgroundImage;
+@synthesize rightBackgroundImage = _rightBackgroundImage;
 
 #pragma mark NSObject
 
-- (id)init {
-	return [self initWithNibName:nil bundle:nil];
-}
-
-
 - (void)dealloc {
+	self.leftBackgroundImage = nil;
+	self.rightBackgroundImage = nil;
 	[_tableView release];
-	[_inputView release];
+	[_inputBackgroundView release];
+	[_textField release];
 	[_sendButton release];
 	[super dealloc];
 }
 
 
-#pragma mark UITableViewController
+#pragma mark UIViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nil bundle:nil]) {
-		self.view.backgroundColor = [UIColor colorWithRed:0.859 green:0.886 blue:0.929 alpha:1.0];
-		
-		// Table view
-		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height - kInputHeight) style:UITableViewStylePlain];
-		_tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-		_tableView.backgroundColor = self.view.backgroundColor;
-		_tableView.dataSource = self;
-		_tableView.delegate = self;
-		_tableView.separatorColor = self.view.backgroundColor;
-		[self.view addSubview:_tableView];
-		
-		// Input
-		_inputView = [[SSGradientView alloc] initWithFrame:CGRectMake(0.0, self.view.frame.size.height - kInputHeight, self.view.frame.size.width, kInputHeight)];
-		_inputView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-		_inputView.hasBottomBorder = NO;
-		_inputView.topBorderColor = [UIColor colorWithRed:0.733 green:0.741 blue:0.745 alpha:1.0];
-		_inputView.topColor = [UIColor colorWithRed:0.914 green:0.922 blue:0.929 alpha:1.0];
-		_inputView.bottomColor = [UIColor colorWithRed:0.765 green:0.773 blue:0.788 alpha:1.0];
-		[self.view addSubview:_inputView];
-		
-		// Text field
-		SSTextField *textField = [[SSTextField alloc] initWithFrame:CGRectMake(6.0, 8.0, self.view.frame.size.width - 75.0, 27.0)];
-		textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-		textField.background = [[UIImage imageNamed:@"SSMessagesViewControllerTextFieldBackground.png"] stretchableImageWithLeftCapWidth:12 topCapHeight:0];
-		textField.delegate = self;
-		textField.font = [UIFont systemFontOfSize:15.0];
-		textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-		textField.textInsets = UIEdgeInsetsMake(0.0, 12.0, 0.0, 12.0);
-		[_inputView addSubview:textField];
-		[textField release];
-		
-		// Send button
-		_sendButton = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
-		_sendButton.frame = CGRectMake(self.view.frame.size.width - 65.0, 8.0, 59.0, 27.0);
-		_sendButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-		_sendButton.titleLabel.font = [UIFont boldSystemFontOfSize:16.0];
-		_sendButton.titleLabel.shadowOffset = CGSizeMake(0.0, -1.0);
-		[_sendButton setBackgroundImage:[[UIImage imageNamed:@"SSMessagesViewControllerSendButtonBackground.png"] stretchableImageWithLeftCapWidth:12 topCapHeight:0] forState:UIControlStateNormal];
-		[_sendButton setTitle:@"Send" forState:UIControlStateNormal];
-		[_sendButton setTitleColor:[UIColor colorWithWhite:1.0 alpha:0.4] forState:UIControlStateNormal];
-		[_sendButton setTitleShadowColor:[UIColor colorWithRed:0.325 green:0.463 blue:0.675 alpha:1.0] forState:UIControlStateNormal];
-		[_inputView addSubview:_sendButton];
-    }
-    return self;
+- (void)viewDidLoad {
+	self.view.backgroundColor = [UIColor colorWithRed:0.859f green:0.886f blue:0.929f alpha:1.0f];
+	
+	CGSize size = self.view.frame.size;
+	
+	// Table view
+	_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, size.width, size.height - kInputHeight) style:UITableViewStylePlain];
+	_tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	_tableView.backgroundColor = self.view.backgroundColor;
+	_tableView.dataSource = self;
+	_tableView.delegate = self;
+	_tableView.separatorColor = self.view.backgroundColor;
+	[self.view addSubview:_tableView];
+	
+	// Input
+	_inputBackgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, size.height - kInputHeight, size.width, kInputHeight)];
+	_inputBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+	_inputBackgroundView.image = [UIImage imageNamed:@"SSMessagesViewControllerInputBackground.png"];
+	_inputBackgroundView.userInteractionEnabled = YES;
+	[self.view addSubview:_inputBackgroundView];
+	
+	// Text field
+	_textField = [[SSTextField alloc] initWithFrame:CGRectMake(6.0f, 0.0f, size.width - 75.0f, kInputHeight)];
+	_textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	_textField.backgroundColor = [UIColor whiteColor];
+	_textField.background = [[UIImage imageNamed:@"SSMessagesViewControllerTextFieldBackground.png"] stretchableImageWithLeftCapWidth:12 topCapHeight:0];
+	_textField.delegate = self;
+	_textField.font = [UIFont systemFontOfSize:15.0f];
+	_textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+	_textField.textEdgeInsets = UIEdgeInsetsMake(4.0f, 12.0f, 0.0f, 12.0f);
+	[_inputBackgroundView addSubview:_textField];
+	
+	// Send button
+	_sendButton = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
+	_sendButton.frame = CGRectMake(size.width - 65.0f, 8.0f, 59.0f, 27.0f);
+	_sendButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+	_sendButton.titleLabel.font = [UIFont boldSystemFontOfSize:16.0f];
+	_sendButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f);
+	[_sendButton setBackgroundImage:[[UIImage imageNamed:@"SSMessagesViewControllerSendButtonBackground.png"] stretchableImageWithLeftCapWidth:12 topCapHeight:0] forState:UIControlStateNormal];
+	[_sendButton setTitle:@"Send" forState:UIControlStateNormal];
+	[_sendButton setTitleColor:[UIColor colorWithWhite:1.0f alpha:0.4f] forState:UIControlStateNormal];
+	[_sendButton setTitleShadowColor:[UIColor colorWithRed:0.325f green:0.463f blue:0.675f alpha:1.0f] forState:UIControlStateNormal];
+	[_inputBackgroundView addSubview:_sendButton];
+	
+	self.leftBackgroundImage = [[UIImage imageNamed:@"SSMessageTableViewCellBackgroundClear.png"] stretchableImageWithLeftCapWidth:24 topCapHeight:14];
+	self.rightBackgroundImage = [[UIImage imageNamed:@"SSMessageTableViewCellBackgroundGreen.png"] stretchableImageWithLeftCapWidth:17 topCapHeight:14];
 }
 
 
 #pragma mark SSMessagesViewController
 
 // This method is intended to be overridden by subclasses
-- (SSMessageTableViewCellMessageStyle)messageStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return SSMessageTableViewCellMessageStyleGray;
+- (SSMessageStyle)messageStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return SSMessageStyleLeft;
 }
 
 
@@ -111,12 +113,13 @@ CGFloat kInputHeight = 40.0;
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     static NSString *cellIdentifier = @"cellIdentifier";
     
     SSMessageTableViewCell *cell = (SSMessageTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[[SSMessageTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
+		[cell setBackgroundImage:self.leftBackgroundImage forMessageStyle:SSMessageStyleLeft];
+		[cell setBackgroundImage:self.rightBackgroundImage forMessageStyle:SSMessageStyleRight];
     }
 	
     cell.messageStyle = [self messageStyleForRowAtIndexPath:indexPath];
@@ -136,25 +139,25 @@ CGFloat kInputHeight = 40.0;
 #pragma mark UITextFieldDelegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-	[UIView beginAnimations:@"beginEditing" context:_inputView];
+	[UIView beginAnimations:@"beginEditing" context:_inputBackgroundView];
 	[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-	[UIView setAnimationDuration:0.3];
-	_tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 216.0, 0.0);
+	[UIView setAnimationDuration:0.3f];
+	_tableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, 216.0f, 0.0f);
 	_tableView.scrollIndicatorInsets = _tableView.contentInset;
-	_inputView.frame = CGRectMake(0.0, 160.0, self.view.frame.size.width, kInputHeight);
+	_inputBackgroundView.frame = CGRectMake(0.0f, 160.0f, self.view.frame.size.width, kInputHeight);
 	[_sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 	[UIView commitAnimations];
 }
 
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-	[UIView beginAnimations:@"endEditing" context:_inputView];
+	[UIView beginAnimations:@"endEditing" context:_inputBackgroundView];
 	[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-	[UIView setAnimationDuration:0.3];
+	[UIView setAnimationDuration:0.3f];
 	_tableView.contentInset = UIEdgeInsetsZero;
 	_tableView.scrollIndicatorInsets = UIEdgeInsetsZero;
-	_inputView.frame = CGRectMake(0.0, _tableView.frame.size.height, self.view.frame.size.width, kInputHeight);
-	[_sendButton setTitleColor:[UIColor colorWithWhite:1.0 alpha:0.4] forState:UIControlStateNormal];
+	_inputBackgroundView.frame = CGRectMake(0.0f, _tableView.frame.size.height, self.view.frame.size.width, kInputHeight);
+	[_sendButton setTitleColor:[UIColor colorWithWhite:1.0f alpha:0.4f] forState:UIControlStateNormal];
 	[UIView commitAnimations];
 }
 

@@ -3,7 +3,7 @@
 //  Messages
 //
 //  Created by Sam Soffes on 3/10/10.
-//  Copyright 2010 Sam Soffes. All rights reserved.
+//  Copyright 2010-2011 Sam Soffes. All rights reserved.
 //
 
 #import "SSMessageTableViewCell.h"
@@ -14,9 +14,10 @@
 #pragma mark NSObject
 
 - (void)dealloc {
-	[bubbleView release];
+	[_bubbleView release];
 	[super dealloc];
 }
+
 
 #pragma mark UITableViewCell
 
@@ -25,34 +26,44 @@
 		self.selectionStyle = UITableViewCellSelectionStyleNone;		
 		self.textLabel.hidden = YES;
 				
-		bubbleView = [[SSMessageTableViewCellBubbleView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.contentView.frame.size.width, self.contentView.frame.size.height)];
-		bubbleView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-		[self.contentView addSubview:bubbleView];
-		[self.contentView sendSubviewToBack:bubbleView];
+		_bubbleView = [[SSMessageTableViewCellBubbleView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.contentView.frame.size.width, self.contentView.frame.size.height)];
+		_bubbleView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+		[self.contentView addSubview:_bubbleView];
+		[self.contentView sendSubviewToBack:_bubbleView];
     }
     return self;
 }
 
+
 #pragma mark Getters
 
-- (SSMessageTableViewCellMessageStyle)messageStyle {
-	return bubbleView.messageStyle;
+- (SSMessageStyle)messageStyle {
+	return _bubbleView.messageStyle;
 }
 
 
 - (NSString *)messageText {
-	return bubbleView.messageText;
+	return _bubbleView.messageText;
 }
+
 
 #pragma mark Setters
 
-- (void)setMessageStyle:(SSMessageTableViewCellMessageStyle)aMessageStyle {
-	bubbleView.messageStyle = aMessageStyle;
+- (void)setMessageStyle:(SSMessageStyle)aMessageStyle {
+	_bubbleView.messageStyle = aMessageStyle;
 }
 
 
 - (void)setMessageText:(NSString *)text {
-	bubbleView.messageText = text;
+	_bubbleView.messageText = text;
 }
 
+
+- (void)setBackgroundImage:(UIImage *)backgroundImage forMessageStyle:(SSMessageStyle)messsageStyle {
+	if (messsageStyle == SSMessageStyleLeft) {
+		_bubbleView.leftBackgroundImage = backgroundImage;
+	} else if (messsageStyle == SSMessageStyleRight) {
+		_bubbleView.rightBackgroundImage = backgroundImage;
+	}
+}
 @end
