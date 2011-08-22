@@ -51,11 +51,13 @@
 
 - (void)setMessageStyle:(SSMessageStyle)aMessageStyle {
 	_bubbleView.messageStyle = aMessageStyle;
+  [_bubbleView setNeedsDisplay];
 }
 
 
 - (void)setMessageText:(NSString *)text {
 	_bubbleView.messageText = text;
+  [_bubbleView setNeedsDisplay];
 }
 
 
