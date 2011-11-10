@@ -12,6 +12,8 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		7BE2DF93146C76A100DA128A /* SSDrawingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE2DF90146C76A100DA128A /* SSDrawingUtilities.m */; };
+		7BE2DF94146C76A100DA128A /* SSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE2DF92146C76A100DA128A /* SSTextField.m */; };
 		B27D0FC912878A3300B58D1D /* MDDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27D0FC812878A3300B58D1D /* MDDemoViewController.m */; };
 		B27D0FD412878AA300B58D1D /* SSMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27D0FCF12878AA300B58D1D /* SSMessagesViewController.m */; };
 		B27D0FD512878AA300B58D1D /* SSMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B27D0FD112878AA300B58D1D /* SSMessageTableViewCell.m */; };
@@ -27,25 +29,7 @@
 		B2FEFBEB1366956C00B4D828 /* SSMessageTableViewCellBackgroundClear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2FEFBE11366956C00B4D828 /* SSMessageTableViewCellBackgroundClear@2x.png */; };
 		B2FEFBEC1366956C00B4D828 /* SSMessageTableViewCellBackgroundGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B2FEFBE21366956C00B4D828 /* SSMessageTableViewCellBackgroundGreen.png */; };
 		B2FEFBED1366956C00B4D828 /* SSMessageTableViewCellBackgroundGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2FEFBE31366956C00B4D828 /* SSMessageTableViewCellBackgroundGreen@2x.png */; };
-		C94A5254134B0730004C7881 /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C94A5238134B05DB004C7881 /* libSSToolkit.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C94A5237134B05DB004C7881 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = SSToolkit;
-		};
-		C94A524F134B06D3004C7881 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = SSToolkit;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,6 +40,10 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Messages_Demo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messages_Demo_Prefix.pch; sourceTree = "<group>"; };
+		7BE2DF8F146C76A100DA128A /* SSDrawingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSDrawingUtilities.h; path = ../Classes/SSDrawingUtilities.h; sourceTree = "<group>"; };
+		7BE2DF90146C76A100DA128A /* SSDrawingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSDrawingUtilities.m; path = ../Classes/SSDrawingUtilities.m; sourceTree = "<group>"; };
+		7BE2DF91146C76A100DA128A /* SSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSTextField.h; path = ../Classes/SSTextField.h; sourceTree = "<group>"; };
+		7BE2DF92146C76A100DA128A /* SSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSTextField.m; path = ../Classes/SSTextField.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Messages_Demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Messages_Demo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		B27D0FC712878A3300B58D1D /* MDDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDemoViewController.h; sourceTree = "<group>"; };
 		B27D0FC812878A3300B58D1D /* MDDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDemoViewController.m; sourceTree = "<group>"; };
@@ -65,7 +53,6 @@
 		B27D0FD112878AA300B58D1D /* SSMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessageTableViewCell.m; path = ../Classes/SSMessageTableViewCell.m; sourceTree = "<group>"; };
 		B27D0FD212878AA300B58D1D /* SSMessageTableViewCellBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSMessageTableViewCellBubbleView.h; path = ../Classes/SSMessageTableViewCellBubbleView.h; sourceTree = "<group>"; };
 		B27D0FD312878AA300B58D1D /* SSMessageTableViewCellBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSMessageTableViewCellBubbleView.m; path = ../Classes/SSMessageTableViewCellBubbleView.m; sourceTree = "<group>"; };
-		B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSToolkit.xcodeproj; path = ../SSToolkit/SSToolkit.xcodeproj; sourceTree = "<group>"; };
 		B27D0FEF12878B2200B58D1D /* SSToolkit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SSToolkit.bundle; path = SSToolkit/Resources/SSToolkit.bundle; sourceTree = "<group>"; };
 		B2FEFBDA1366956C00B4D828 /* SSMessagesViewControllerInputBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSMessagesViewControllerInputBackground.png; sourceTree = "<group>"; };
 		B2FEFBDB1366956C00B4D828 /* SSMessagesViewControllerInputBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SSMessagesViewControllerInputBackground@2x.png"; sourceTree = "<group>"; };
@@ -87,7 +74,6 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
-				C94A5254134B0730004C7881 /* libSSToolkit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +83,6 @@
 		080E96DDFE201D6D7F000001 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */,
 				1D3623240D0F684500981E51 /* MDAppDelegate.h */,
 				1D3623250D0F684500981E51 /* MDAppDelegate.m */,
 				B27D0FC712878A3300B58D1D /* MDDemoViewController.h */,
@@ -185,17 +170,13 @@
 				B27D0FD112878AA300B58D1D /* SSMessageTableViewCell.m */,
 				B27D0FD212878AA300B58D1D /* SSMessageTableViewCellBubbleView.h */,
 				B27D0FD312878AA300B58D1D /* SSMessageTableViewCellBubbleView.m */,
+				7BE2DF8F146C76A100DA128A /* SSDrawingUtilities.h */,
+				7BE2DF90146C76A100DA128A /* SSDrawingUtilities.m */,
+				7BE2DF91146C76A100DA128A /* SSTextField.h */,
+				7BE2DF92146C76A100DA128A /* SSTextField.m */,
 				B27D0FD712878AAB00B58D1D /* Images */,
 			);
 			name = SSMessagesViewController;
-			sourceTree = "<group>";
-		};
-		C94A5234134B05DB004C7881 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C94A5238134B05DB004C7881 /* libSSToolkit.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +193,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C94A5250134B06D3004C7881 /* PBXTargetDependency */,
 			);
 			name = "Messages Demo";
 			productName = "Messages Demo";
@@ -236,28 +216,12 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C94A5234134B05DB004C7881 /* Products */;
-					ProjectRef = B27D0FE412878B1900B58D1D /* SSToolkit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Messages Demo */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C94A5238134B05DB004C7881 /* libSSToolkit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSSToolkit.a;
-			remoteRef = C94A5237134B05DB004C7881 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
@@ -291,18 +255,12 @@
 				B27D0FD412878AA300B58D1D /* SSMessagesViewController.m in Sources */,
 				B27D0FD512878AA300B58D1D /* SSMessageTableViewCell.m in Sources */,
 				B27D0FD612878AA300B58D1D /* SSMessageTableViewCellBubbleView.m in Sources */,
+				7BE2DF93146C76A100DA128A /* SSDrawingUtilities.m in Sources */,
+				7BE2DF94146C76A100DA128A /* SSTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C94A5250134B06D3004C7881 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SSToolkit;
-			targetProxy = C94A524F134B06D3004C7881 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
