@@ -142,7 +142,7 @@ CGFloat kInputHeight = 40.0f;
 	[UIView beginAnimations:@"beginEditing" context:_inputBackgroundView];
 	[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
 	[UIView setAnimationDuration:0.3f];
-	_tableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, 216.0f, 0.0f);
+	_tableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, 167.0f, 0.0f);
 	_tableView.scrollIndicatorInsets = _tableView.contentInset;
 	_inputBackgroundView.frame = CGRectMake(0.0f, 160.0f, self.view.frame.size.width, kInputHeight);
 	[_sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
