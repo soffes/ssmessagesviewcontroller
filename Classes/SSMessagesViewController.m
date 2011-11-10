@@ -9,7 +9,7 @@
 #import "SSMessagesViewController.h"
 #import "SSMessageTableViewCell.h"
 #import "SSMessageTableViewCellBubbleView.h"
-#import <SSToolkit/SSTextField.h>
+#import "SSTextField.h"
 
 CGFloat kInputHeight = 40.0f;
 
